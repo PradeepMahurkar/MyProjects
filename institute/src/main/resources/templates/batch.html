@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Batches</title>
+    <link rel="stylesheet" href="/static/batch.css">
+</head>
+<body>
+<form th:action="@{/admin/create-batch}" th:object="${batch}" method="post">
+    <label>Batch Name:</label>
+        <input type="text" th:field="*{name}" />
+    <p th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></p>
+
+    <label>Course:</label>
+        <select th:field="*{course}">
+            <option th:each="course : ${courses}" th:value="${course}" th:text="${course}"></option>
+        </select>
+    <p th:if="${#fields.hasErrors('course')}" th:errors="*{course}"></p>
+
+    <label>Instructor:</label>
+        <input type="text" th:field="*{instructor}" />
+
+
+    <label>Start Date:</label>
+        <input type="date" th:field="*{startDate}" />
+    <p th:if="${#fields.hasErrors('startDate')}" th:errors="*{startDate}"></p>
+
+    <label>End Date:</label>
+        <input type="date" th:field="*{endDate}" />
+    <p th:if="${#fields.hasErrors('endDate')}" th:errors="*{endDate}"></p>
+
+    <label>Capacity:</label>
+        <input type="number" th:field="*{capacity}" />
+    <p th:if="${#fields.hasErrors('capacity')}" th:errors="*{capacity}"></p>
+
+    <label>Batch Timings:</label>
+        <input type="text" th:field="*{timings}" />
+
+    <button type="submit">Create Batch</button>
+</form>
+
+
+</body>
+</html>

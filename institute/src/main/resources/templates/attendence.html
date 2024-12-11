@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" href="/static/attendence.css">
+<head>
+    <title>Mark Attendance</title>
+</head>
+<body>
+<form th:action="@{/instructor/mark-attendance}" th:object="${attendance}" method="post">
+    <div>
+        <label for="batch">Batch ID:</label>
+        <select th:field="*{batch}" id="batch" required>
+            <option value="" disabled selected>Select Batch</option>
+            <option th:each="batch : ${batches}" th:value="${batch.id}" th:text="${batch.batchName}"></option>
+        </select>
+    </div>
+    <div>
+        <label for="studentName">Student Name:</label>
+        <input type="text" th:field="*{studentName}" id="studentName" required />
+    </div>
+    <div>
+        <label for="date">Date:</label>
+        <input type="date" th:field="*{date}" id="date" required />
+    </div>
+    <div>
+        <label for="status">Status:</label>
+        <select th:field="*{status}" id="status" required>
+            <option value="" disabled selected>Select Status</option>
+            <option value="Present">Present</option>
+            <option value="Absent">Absent</option>
+        </select>
+    </div>
+    <button type="submit">Mark Attendance</button>
+</form>
+</body>
+</html>

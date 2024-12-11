@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Institute Management Dashboard</title>
+    <link rel="stylesheet" href="RegistrationDetails.css">
+</head>
+<body>
+
+<!-- Sidebar for navigation -->
+<aside class="sidebar">
+    <h2>Dashboard</h2>
+    <ul>
+        <li><a href="/course">Courses</a></li>
+        <li><a href="#">Batches</a></li>
+        <li><a href="#">Students</a></li>
+        <li><a href="#">Instructors</a></li>
+        <li><a href="#">Reports</a></li>
+    </ul>
+</aside>
+
+<!-- Main content area -->
+<div class="main-content">
+
+    <!-- Header section -->
+    <header class="header">
+        <h1>Welcome, Admin</h1>
+        <div class="profile-info">
+            <p>Profile | Logout</p>
+        </div>
+    </header>
+
+    <!-- Dashboard overview -->
+    <section class="dashboard-overview">
+        <div class="card">
+            <h3>Total Courses</h3>
+            <p>02</p>
+        </div>
+        <div class="card">
+            <h3>Total Batches</h3>
+            <p>02</p>
+        </div>
+        <div class="card">
+            <h3>Total Students</h3>
+            <p>50</p>
+        </div>
+        <div class="card">
+            <h3>Total Instructors</h3>
+            <p>02</p>
+        </div>
+    </section>
+    <!-- Show Student Registration Table -->
+    <section class="courses-list">
+        <h2>Student Registration Details</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>fullName</th>
+                <th>email</th>
+                <th>password</th>
+                <th>contactNumber</th>
+                <th>dateOfBirth</th>
+                <th>address</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="course : ${courses}" >
+                <td th:text="${course.id}"></td>
+                <td th:text="${course.fullName}"></td>
+                <td th:text="${course.email}"></td>
+                <td th:text="${course.password}"></td>
+                <td th:text="${course.contactNumber}"></td>
+                <td th:text="${course.dateOfBirth}"></td>
+                <td th:text="${course.address}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+
+</div>
+
+</body>
+</html>

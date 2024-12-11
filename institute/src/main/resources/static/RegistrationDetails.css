@@ -1,0 +1,122 @@
+/* CSS for Dashboard */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+/* Sidebar styling */
+.sidebar {
+    width: 200px;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding-top: 20px;
+}
+
+.sidebar h2 {
+    text-align: center;
+    color: #fff;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 15px;
+    text-align: center;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar ul li a:hover {
+    background-color: #575757;
+}
+
+/* Main content styling */
+.main-content {
+    margin-left: 200px;
+    padding: 20px;
+}
+
+/* Header styling */
+.header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+/* Profile info styling */
+.profile-info {
+    font-size: 14px;
+}
+
+/* Dashboard overview cards */
+.dashboard-overview {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    width: 150px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.card p {
+    font-size: 24px;
+    margin: 10px 0 0;
+    color: #007bff;
+}
+
+/* Table styling */
+.courses-list table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.courses-list table th, .courses-list table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.courses-list table th {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.courses-list table tr:nth-child(even) {
+    background-color: #f4f4f9;
+}

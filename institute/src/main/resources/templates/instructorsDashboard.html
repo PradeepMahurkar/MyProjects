@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Institute Management Dashboard</title>
+    <link rel="stylesheet" href="/static/instructorsDashboard.css">
+</head>
+<body>
+
+<!-- Sidebar for navigation -->
+<aside class="sidebar">
+    <h2>Dashboard</h2>
+    <ul>
+        <li><a th:href="@{/course}">Courses</a></li>
+        <li><a th:href="@{/registration-details}">Batches</a></li>
+        <li><a th:href="@{/registration-details}">Students</a></li>
+        <li><a th:href="@{/registration-details}">Instructors</a></li>
+        <li><a th:href="@{/registration-details}">Reports</a></li>
+    </ul>
+</aside>
+
+<!-- Main content area -->
+<div class="main-content">
+
+    <!-- Header section -->
+    <header class="header">
+        <h1>Welcome, Instructors</h1>
+        <div class="profile-info">
+            <p>Profile | Logout</p>
+        </div>
+    </header>
+
+    <!-- Dashboard overview -->
+    <div class="dashboard-container">
+        <div class="dashboard-navigation">
+            <a href="/instructor/batches" class="dashboard-link">
+                <div class="dashboard-card">
+                    <h2>Manage Batches</h2>
+                    <p>View and manage assigned batches and students</p>
+                </div>
+            </a>
+            <a href="/instructor/attendance" class="dashboard-link">
+                <div class="dashboard-card">
+                    <h2>Track Attendance</h2>
+                    <p>Mark and review student attendance</p>
+                </div>
+            </a>
+            <a href="/instructor/quiz" class="dashboard-link">
+                <div class="dashboard-card">
+                    <h2>Create Quizzes</h2>
+                    <p>Develop quizzes for students</p>
+                </div>
+            </a>
+            <a href="/instructor/assignment" class="dashboard-link">
+                <div class="dashboard-card">
+                    <h2>Create Assignments</h2>
+                    <p>Assign work and review submissions</p>
+                </div>
+            </a>
+            <a href="/instructor/grade" class="dashboard-link">
+                <div class="dashboard-card">
+                    <h2>Grade Submissions</h2>
+                    <p>Review and grade assignments and quizzes</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+ </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Institute Management Dashboard</title>
+    <link rel="stylesheet" href="/static/studentDashboard.css">
+</head>
+<body>
+
+<!-- Sidebar for navigation -->
+<aside class="sidebar">
+    <h2>Dashboard</h2>
+    <ul>
+        <li><a th:href="@{/course}">Courses</a></li>
+        <li><a th:href="@{/registration-details}">Registration Details</a></li>
+        <li><a th:href="@{/registration-details}">Batches</a></li>
+        <li><a th:href="@{/registration-details}">Students</a></li>
+        <li><a th:href="@{/registration-details}">Instructors</a></li>
+        <li><a th:href="@{/registration-details}">Reports</a></li>
+    </ul>
+</aside>
+
+<!-- Main content area -->
+<div class="main-content">
+
+    <!-- Header section -->
+    <header class="header">
+        <h1>Welcome, Student</h1>
+        <div class="profile-info">
+            <p>Profile | Logout</p>
+        </div>
+    </header>
+
+    <!-- Dashboard overview -->
+    <section class="dashboard-overview">
+        <div class="card">
+            <h3>Total Courses</h3>
+            <p>02</p>
+        </div>
+        <div class="card">
+            <h3>Total Batches</h3>
+            <p>02</p>
+        </div>
+        <div class="card">
+            <h3>Total Students</h3>
+            <p>50</p>
+        </div>
+        <div class="card">
+            <h3>Total Instructors</h3>
+            <p>02</p>
+        </div>
+    </section>
+</div>
+
+</body>
+</html>

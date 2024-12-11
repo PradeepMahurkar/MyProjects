@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Course</title>
+    <link rel="stylesheet" href="/static/editcourse.css">
+</head>
+<body>
+<div class="container">
+    <h1>Edit Course</h1>
+    <form action="/admin/edit-course" method="post">
+        <div class="form-group">
+            <label for="id">Course ID:</label>
+            <input type="number" id="id" name="id"  readonly>
+        </div>
+        <div class="form-group">
+            <label for="name">Course Name:</label>
+            <input type="text" id="name" name="name"  required pattern="^[a-zA-Z0-9 ]+$">
+        </div>
+        <div class="form-group">
+            <label for="description">Description:</label>
+            <textarea id="description" name="description"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="startDate">Start Date:</label>
+            <input type="date" id="startDate" name="startDate"  required>
+        </div>
+        <div class="form-group">
+            <label for="endDate">End Date:</label>
+            <input type="date" id="endDate" name="endDate"  required>
+        </div>
+        <div class="form-group">
+            <label for="duration">Duration (weeks):</label>
+            <input type="number" id="duration" name="duration" required>
+        </div>
+        <div class="form-group">
+            <label for="instructor">Instructor:</label>
+            <input type="text" id="instructor" name="instructor" required>
+        </div>
+        <button type="submit" class="btn">Update Course</button>
+    </form>
+</div>
+</body>
+</html>
